@@ -977,6 +977,7 @@ PREFIX the adjustment is relative to the current time."
                                              (+ (chronos--seconds-since-start c)
                                                 (chronos--seconds-to-expiry c)))))
     (chronos--set-start-time c2 (current-time))
+    (chronos--set-action c2 t)
     (setq chronos--timers-list (delq c chronos--timers-list))
     (setq chronos--selected-timer c2)
     (push c2 chronos--timers-list)))
